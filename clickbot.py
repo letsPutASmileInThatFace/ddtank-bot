@@ -15,8 +15,8 @@ import time
 #      was in position press F6 to create log. Do it for the two coordinates
 # 6- uncomment line 33, comment line 35
 # 7- When you learn both coordinates change (a, b, c, d) accordingly on line 
-# 8- and change the times on click function with the number of fireworks you have
-# 9- run python program again and you will have 5 seconds to open emulator app
+# 8- and change the times on click function( line 33 ) with the number of fireworks you have
+# 9- run python program again and you will have 5 seconds to open the emulator app
 # 10- don't interfere with pc and let the bot do its job 
 
 
