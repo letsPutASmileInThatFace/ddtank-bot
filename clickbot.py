@@ -24,9 +24,9 @@ def click(x1, y1, x2, y2, fireworkCount):
     time.sleep(5)
     while fireworkCount > 0:
         times -= 1
-        pyautogui.click(a, b)
+        pyautogui.click(x1, y1)
         time.sleep(1)
-        pyautogui.click(c, d)
+        pyautogui.click(x2, y2)
         time.sleep(5)
 
 
