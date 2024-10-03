@@ -1,36 +1,36 @@
 import pyautogui
 import time
 
-# Before starting make sure you have installed 'pyautogui' library
-# Just to make sure write 'pip install pyautogui' on terminal/command line 
-# This way it will install library if it is not already installed
-
-# 1- uncomment line 36
-# 2- open terminal and run the program using 'py clickbot.py' command 
-# 3- program will open a mouse info program 
-# 4- open your game on emulator and find the mouse positions for the first click(a, b)
-# 5- find the mouse click for (c, d)
-# tip: to find the coordinates easily while the  python program was running go 
-#      to the emulator click on the python program and then while your mouse 
-#      was in position press F6 to create log. Do it for the two coordinates
-# 6- uncomment line 33, comment line 36
-# 7- When you learn both coordinates change (a, b, c, d) accordingly on line 
-# 8- and change the times on click function( line 33 ) with the number of fireworks you have
-# 9- run python program again and you will have 5 seconds to open the emulator app
-# 10- don't interfere with pc and let the bot do its job 
-
-
-def click(x1, y1, x2, y2, fireworkCount):
+def click(x1, y1, x2, y2, times):
     time.sleep(5)
-    while fireworkCount > 0:
+    while times > 0:
         times -= 1
         pyautogui.click(x1, y1)
         time.sleep(1)
         pyautogui.click(x2, y2)
         time.sleep(5)
 
+print("\n       ---User-Instructions---\n")
+print("1- Make sure your screen resolution is 1920x1080")
+print("2- If you have different screen resolution change it to 1920*1080")
+print("3- After entering inputs you will have 5 seconds to switch to your emulator ")
+print("4- Make sure to open the emulator at full screen after entering inputs")
+print("5- Enter the needed inputs and it will start working automatically ")
+print("\n       ---End of instructions---\n")
+whichOne = int(input("For big firework enter 1 for middle firework enter 2  for small firework enter 3: "))
+times = int(input("Enter how many fireworks you have: "))
 
-# click(1653,858, 1176,841, 36)  
-# click( x1, y1, x2, y2, number of firework )
+if(whichOne == 3):
+    click(1563,900, 971,900, times)
+elif(whichOne == 2):
+    click(1563,900, 1168,900, times)
+elif(whichOne == 1):
+    click(1563,900, 1355,900, times)
 
 # pyautogui.mouseInfo()
+
+# The code at line 30 opens a coordinate finder: 
+# if your screen resolution is not 1920*1080 and don't want to  change it 
+# comment all the other code and uncomment line 30 this way 
+# you can find the right coordinates for your screen resolution 
+# after finding the right resolution change x1, y1, x2, y2 accordingly
